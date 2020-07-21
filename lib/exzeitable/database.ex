@@ -48,7 +48,7 @@ defmodule Exzeitable.Database do
       |> exclude(:select)
       |> exclude(:preload)
 
-    from(q in query, select: count(q.id))
+    from(q in query, select: count(q.ref)) # NOTE: patch for demo
   end
 
   # Repo.all
